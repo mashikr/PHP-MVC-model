@@ -5,6 +5,8 @@ class Home extends Controller {
         $user = $this->model('User');
         $user->name = $name;
 
-        echo $user->name;
+        $about = ['profession' => 'Student', 'age' => 23];
+
+        $this->view('home/index',['name' => $user->name, 'about' => $about]);
     }
 }
