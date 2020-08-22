@@ -2,11 +2,9 @@
 
 class Home extends Controller {
     public function index($name = '') {
-        echo($name);
-        echo '<br>home/index';
-    }
+        $user = $this->model('User');
+        $user->name = $name;
 
-    public function test() {
-        echo 'home/test';
+        echo $user->name;
     }
 }
